@@ -6,9 +6,7 @@ import apiBaseURI from "../common/helpers";
 function* getProducts() {
   try {
     let products = yield fetch(`${apiBaseURI}/text/tamil-rc/old`)
-    .then(r =>
-        r.json()
-    );
+    .then(r => r.json());
     yield put(actionCreators.getProductsSuccessActionCreator(products));
   } catch (error) {
     yield put(actionCreators.getProductsFailureActionCreator(error));
@@ -18,5 +16,3 @@ function* getProducts() {
 export function* getProductsWatcher() {
   yield takeLatest(GET_PRODUCTS, getProducts);
 }
-
-// saga file
