@@ -18,3 +18,5 @@ function* getProducts() {
 export function* getProductsWatcher() {
   yield takeLatest(GET_PRODUCTS, getProducts);
 }
+
+// saga file
