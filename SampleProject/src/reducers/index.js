@@ -4,7 +4,7 @@ import {
     GET_PRODUCTS_SUCCESS
 } from "../actionTypes";
 
-function counterReducer( prevState = {}, action) {
+export default function counterReducer( prevState = {}, action) {
     switch (action.type) {
         case GET_PRODUCTS:
             return { ...prevState, isLoading: true };
@@ -16,7 +16,3 @@ function counterReducer( prevState = {}, action) {
             return prevState;
     }
 }
-
-export default counterReducer;
-
-// reducer change
